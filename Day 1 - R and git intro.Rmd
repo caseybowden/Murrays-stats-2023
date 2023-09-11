@@ -188,3 +188,13 @@ plot(x,y)
 ```{r}
 median(x)
 ```
+
+#### to merge branches
+
+must be on b ranch you want to bring the code to
+
+usually the main branch
+
+merge the branches in terminal
+
+**git merge experimental**
