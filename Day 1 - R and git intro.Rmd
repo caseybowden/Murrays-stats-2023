@@ -138,7 +138,7 @@ click save
 
 it will disappear from git tab
 
-### folder with data 
+### folder with data
 
 dont want under version control or it to go to github
 
