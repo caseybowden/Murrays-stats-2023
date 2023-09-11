@@ -198,3 +198,5 @@ usually the main branch
 merge the branches in terminal
 
 **git merge experimental**
+
+merge the branches in terminal resolve conflict by removing what you dont want including conflict markers then save and commit
