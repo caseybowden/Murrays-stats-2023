@@ -16,3 +16,21 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 summary(x)
 ```
+
+you get a lot of commits over time and not all commits are equally important
+
+### tag different commits
+
+Lets you find important commits easier
+
+add tag to current commit in terminal
+
+**git tag -a "tag" -m "message"**
+
+NB: cant have spaces in the tag but can have dots, message can have spaces and be long
+
+keep tag short or it defeats purpose
+
+Tag is searchable - message is not
+
+can refer to commit by its number or its tag
