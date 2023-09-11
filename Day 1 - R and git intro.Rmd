@@ -172,10 +172,13 @@ SHA is identification for the commit - often how you refer to it
 
 -   can see more of it underneath
 
-##### create file to commit
+##### create file to commit (ie commit this file)
 
 ```{r}
 x=seq(1, 10, len=1)
 y=40*2 + rnorm(10,0,5)
 plot(x,y)
+summary(x)
 ```
+
+**COMMIT AND COMMIT OFTEN**
