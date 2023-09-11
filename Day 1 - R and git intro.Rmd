@@ -215,18 +215,17 @@ can refer to commit by its number or its tag
 
 ### git - rolling back
 
-**checkout**  - lets you see previous commit
+**checkout** - lets you see previous commit
 
 in [terminal]{.underline}
 
-**git checkout eb3a705f**  - goes back in time
+**git checkout eb3a705f** - goes back in time
 
 Go forward in time again
 
 Git checkout "tag"
 
-Or can go to main
-branch in drop down box
+Or can go to main branch in drop down box
 
 Git checkout main
 
@@ -238,7 +237,7 @@ Can use checkout to tag commit
 
     git revert HEAD --no-edit
 
-### Git - new branch 
+### Git - new branch
 
 can be used to explore different direction and then be merged back later if desired
 
@@ -261,3 +260,27 @@ This is version control on your system - but how do we put it in a remote locati
 NB : pulled Day 1.2 across to here now
 
 ## GitHub - repository
+
+#### get github token
+
+<https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>
+
+lets github and r studio talk to each other
+
+```{r}
+usethis::create_github_token()
+```
+
+```{r}
+gitcreds::gitcreds_set()
+```
+
+```{r}
+gitcreds::gitcreds_get()
+```
+
+![](images/paste-72DA0574.png)
+
+push existing repository from command line
+
+ie put the repository we made before lunch into this space in gitHub
