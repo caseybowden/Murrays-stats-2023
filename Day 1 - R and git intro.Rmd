@@ -287,6 +287,8 @@ push existing repository from command line
 
 ie put the repository we made before lunch into this space in gitHub
 
-#### Clone a repository to work with it 
+#### Clone a repository to work with it
 
 Green code button -\> copy their address
+
+## ALWAYS COMMIT THEN PULL THEN PUSH
