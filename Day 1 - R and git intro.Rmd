@@ -189,6 +189,61 @@ plot(x,y)
 median(x)
 ```
 
+#### Split long script into smaller chunks
+
+```{r}
+summary(x)
+```
+
+you get a lot of commits over time and not all commits are equally important
+
+### tag different commits
+
+Lets you find important commits easier
+
+add tag to current commit in terminal
+
+**git tag -a "tag" -m "message"**
+
+NB: cant have spaces in the tag but can have dots, message can have spaces and be long
+
+keep tag short or it defeats purpose
+
+Tag is searchable - message is not
+
+can refer to commit by its number or its tag
+
+### git - rolling back
+
+**checkout**  - lets you see previous commit
+
+in [terminal]{.underline}
+
+**git checkout eb3a705f**  - goes back in time
+
+Go forward in time again
+
+Git checkout "tag"
+
+Or can go to main
+branch in drop down box
+
+Git checkout main
+
+Can use checkout to tag commit
+
+**reset** - only do this for bank accounts or passwords - very destructive - destroys commit
+
+**revert** - reverts back to previous commit - will make a file the same as file before
+
+    git revert HEAD --no-edit
+
+### Git - new branch 
+
+can be used to explore different direction and then be merged back later if desired
+
+also good for changed figures for publication but keeping code for thesis
+
 #### to merge branches
 
 must be on b ranch you want to bring the code to
@@ -199,4 +254,10 @@ merge the branches in terminal
 
 **git merge experimental**
 
-merge the branches in terminal resolve conflict by removing what you dont want including conflict markers then save and commit
+merge the branches in terminal resolve conflict by removing what you don't want including conflict markers then save and commit
+
+This is version control on your system - but how do we put it in a remote location
+
+NB : pulled Day 1.2 across to here now
+
+## GitHub - repository
