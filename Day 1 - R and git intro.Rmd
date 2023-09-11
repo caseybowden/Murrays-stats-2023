@@ -1,0 +1,181 @@
+---
+title: "Day 1 - R and git intro"
+author: "Casey Bowden"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Murray's stats 2023
+
+<https://pcinereus.github.io/SUYRs_docs/>
+
+## R studio
+
+console for R
+
+terminal for system
+
+### install packages in Rgui
+
+don't install through r studio
+
+-   packages have dependencies which r studio holds in memory
+
+-   r cant update what is in memory
+
+install in terminal with R - pick first option
+
+open Rgui and install in terminal - cant get it to work for me
+
+#### check if you have a package
+
+in r studio
+
+```{r}
+library(tidyverse)
+library(car)
+```
+
+### shortcut keys
+
+alt - shift - k to get shortcut keys
+
+## polymorphism
+
+runs a derivative of the function based on input you provide
+
+ie mean; summary
+
+```{r}
+mean(x = 1:5)
+```
+
+## Git: version control
+
+stored copy of all code so it can be reproduced
+
+good for collaboration or auditing by reviewers
+
+Git is a platform that allows us to keep track of versions of code and colaborate
+
+only keeps track of changes
+
+versions are called "**snapshots**" or "**commits**" and we can go back to any of these states at any time
+
+the **head commit** is the one that will be build upon in future changes
+
+#### System consists of three "trees"
+
+-   **workspace** - files you see on your computer
+
+-   **staging area** - where you nominate which files will be included in the next snapshot
+
+    -   not every file you want to be included in version control
+
+-   **local repository** - where you commit files too - but you cant see this tree
+
+#### file can be in 4 states
+
+-   **untracked** - unsafe, if you delete this file it is gone
+
+-   **staged**- not safe yet but its on its way
+
+-   **committed** - you could delete the file and get it back because it is committed to the snapshot
+
+-   **modified** - when you change committed files - system knows you are keeping track of this file but it has been changed
+
+#### see if git is installed
+
+in terminal quit r q() and type git
+
+in a new machine you need to tell git who you are
+
+I can skip this step this time
+
+in terminal type
+
+git config --global user.name "Your name"
+
+git config --global user.email "Your email"
+
+check what your name is :
+
+\$ git config \--global \--list
+
+user.name=Casey Bowden
+
+user.email=casey.bowden\@my.jcu.edu.au
+
+Tell git to call repository main not master so that github knows where to look
+
+git config \--global init.defaultBranch main
+
+**to get git - click box when opening new project**
+
+### .gitignore
+
+any files listed in this file will not be commited without a big effrot
+
+click on it to see
+
+### git tab
+
+can see status of various files
+
+dont ant to commit project file but it will always appear on list as untracked
+
+so add it to git ignore
+
+### add project file to .gitignore
+
+type into .gitignore
+
+click save
+
+it will disappear from git tab
+
+### folder with data 
+
+dont want under version control or it to go to github
+
+can put a folder in gitignore
+
+ie if i wrote data/ anything in the folder called data will be ignored
+
+### commit gitignore
+
+1.  stage it (click the tick box)
+    1.  changes to A for "added"
+
+    2.  can click box again to unstage it
+2.  commit
+    1.  click commit button
+
+    2.  first commit call "initial commit" in message
+
+        1.  don't go looking for earlier commits, they don't exist
+3.  box pops up to confirm commit
+
+#### check commit history
+
+click history within commit window
+
+SHA is identification for the commit - often how you refer to it
+
+-   only shows you first 7 character but it is 256 characters long
+
+-   but often refer to by just first numbers
+
+-   can see more of it underneath
+
+##### create file to commit
+
+```{r}
+x=seq(1, 10, len=1)
+y=40*2 + rnorm(10,0,5)
+plot(x,y)
+```
