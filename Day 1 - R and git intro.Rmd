@@ -184,3 +184,7 @@ plot(x,y)
 **COMMIT AND COMMIT OFTEN**
 
 #### Split long script into smaller chunks
+
+```{r}
+median(x)
+```
