@@ -261,7 +261,7 @@ NB : pulled Day 1.2 across to here now
 
 ## GitHub - repository
 
-#### get github token
+#### get github token - only once per machine
 
 <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>
 
@@ -281,6 +281,12 @@ gitcreds::gitcreds_get()
 
 ![](images/paste-72DA0574.png)
 
+#### push repository
+
 push existing repository from command line
 
 ie put the repository we made before lunch into this space in gitHub
+
+#### Clone a repository to work with it 
+
+Green code button -\> copy their address
